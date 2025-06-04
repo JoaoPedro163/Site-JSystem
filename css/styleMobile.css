@@ -528,7 +528,7 @@
 
     .chamadaAcaoSct5 h2 {
         text-align: left;
-        font-size:  22px;
+        font-size: 22px;
         font-family: "Montserrat", "Sans-serif";
         color: #00BFFF;
         font-weight: bold;
@@ -567,5 +567,64 @@
     .btnOrcamento img {
         width: 10px;
         margin-bottom: 2%;
+    }
+
+
+    .sct6 {
+        width: 85%;
+        margin: auto;
+        margin-top: 10%;
+    }
+
+    .divImgSct6 {
+        background: linear-gradient(to right, #0A192F 0%, #070D1A 100%);
+        text-align: center;
+        width: 90%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        border-radius: 10px;
+    }
+
+    .divSeloQualidade {
+        margin-top: 2%;
+        display: flex;
+        align-items: center;
+    }
+
+    .divImgSct6 img {
+        width: 60%;
+    }
+
+    .titleSeloQualidade {
+        font-family: "Montserrat", "Sans-serif";
+        font-size: 28px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        width: 90%;
+        margin-top: 4%;
+    }
+
+    .titleSct6 {
+        font-size: 32px;
+        color: white;
+        font-weight: bold;
+        font-family: "Montserrat", "Sans-serif";
+    }
+
+    .subTitleSct6 {
+        color: #FFF3F3;
+        font-weight: 350;
+        font-family: "Inter", "Sans-serif";
+        font-size: 18px;
+    }
+
+    .pSeloQualidade {
+        color: #DADADA;
+        font-weight: 350;
+        font-family: "Inter", "Sans-serif";
+        font-size: 18px;
+        text-align: center;
+        width: 90%;
     }
 }

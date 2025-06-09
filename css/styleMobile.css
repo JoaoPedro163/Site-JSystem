@@ -110,7 +110,7 @@
 
     .divImgRobo img {
         height: 100%;
-        width: 50%;
+        width: auto;
         object-fit: cover;
         opacity: 0.8;
         animation: slideInRight 1.2s ease-out;

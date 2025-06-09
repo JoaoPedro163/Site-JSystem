@@ -1,14 +1,732 @@
-body {
-    background: linear-gradient(45deg,
-            #0A192F 0%,
-            #070D1A 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow-x: hidden;
-    height: auto;
+@media screen and (min-width: 537px) and (max-width: 992px) {
+
+    #header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        animation: fadeDown 0.8s ease-out;
+        background: linear-gradient(to bottom,
+                rgba(7, 13, 26, 0.42) 0%,
+                rgba(27, 25, 25, 0.22) 100%);
+        margin-top: 2%;
+    }
+
+    #headerMobile {
+        text-align: center;
+        background-color: #061025;
+        margin-top: 2%;
+        border-radius: 20px;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .itemMenu {
+        list-style: none;
+    }
+
+    .itemMenu a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 13px;
+        font-family: "Montserrat", "Sans-serif";
+
+    }
+
+    .containerHeader {
+        width: 90%;
+        margin: auto;
+    }
+
+    .divHeader {
+        border: 2px solid #FFD4D4;
+        border-radius: 45px;
+        background: linear-gradient(to bottom,
+                rgba(7, 13, 26, 0.42) 0%,
+                rgba(27, 25, 25, 0.22) 100%);
+        display: flex;
+        align-items: center;
+    }
+
+    .divHeader h1 {
+        color: white;
+        font-size: 18px;
+        font-family: "Space Grotesk", "Sans-serif";
+        display: flex;
+        align-items: center;
+        margin: 0;
+        margin-left: 8%;
+        font-weight: bold;
+    }
+
+    .divBtnHeader {
+        text-align: right;
+        width: 97%;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    .divBtnHeader button {
+        border-radius: 15px;
+        border: none;
+        background-color: #0D2D5C;
+        font-size: 14px;
+        color: white;
+        font-weight: bold;
+        font-family: "Montserrat", "Sans-serif";
+    }
+
+    .sct1 {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .divImgRobo {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        width: 90%;
+        height: 100%;
+        text-align: right;
+    }
+
+    .divImgRobo img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+        opacity: 0.8;
+        animation: slideInRight 1.2s ease-out;
+    }
+
+    .divInfoHeader {
+        position: relative;
+        z-index: 1;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 80vh;
+        width: 95%;
+        margin: auto;
+        margin-top: 10%;
+        animation: fadeUp 1s ease-out;
+    }
+
+    .subTitleHeader {
+        font-size: 14px;
+        color: #ADABAB;
+        font-weight: bold;
+        font-family: "Inter", "Sans-serif";
+        margin: 0;
+    }
+
+    .divInfoHeader h1 {
+        font-size: 36px;
+        text-align: justify;
+        font-weight: bold;
+        width: 80%;
+        margin: 0;
+        font-family: "Space Grotesk", "Sans-serif";
+        margin-bottom: 2%;
+    }
+
+    .spnH1Header {
+        color: #00BFFF;
+    }
+
+    .pHeader {
+        font-size: 17px;
+        font-family: "Inter", "Sans-serif";
+        font-weight: 450;
+        text-align: justify;
+        width: 90%;
+        color: #DADADA;
+    }
+
+    .btnEntrarContato {
+        margin-top: 5%;
+        background-color: #1C2A4A;
+        border: 0.5px solid white;
+        border-radius: 30px;
+        color: white;
+        font-weight: bold;
+        font-family: "Montserrat", "Sans-serif";
+        font-size: 15px;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        width: 35%;
+        justify-content: center;
+        gap: 5px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btnEntrarContato img {
+        width: 10px;
+        height: 10px;
+    }
+
+    .btnNossosServicos {
+        background-color: #070D1A;
+        border: 0.2px solid white;
+        border-radius: 30px;
+        color: white;
+        font-weight: bold;
+        font-family: "Montserrat", "Sans-serif";
+        font-size: 15px;
+        padding: 10px 20px;
+        display: flex;
+        width: 30%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btnEntrarContato:hover,
+    .btnNossosServicos:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .slider {
+        width: 90%;
+        margin: auto;
+        margin-top: 4%;
+        overflow: hidden;
+        margin-bottom: 2%;
+    }
+
+    .carrossel-container {
+        margin: 0;
+    }
+
+    .slide-track {
+        display: flex;
+        width: calc(250px * 10);
+        animation: scroll 60s linear infinite;
+    }
+
+    .slide {
+        width: 30vw;
+        flex-shrink: 0;
+        margin: 0;
+        transition: transform 0.3s ease, filter 0.3s ease;
+        filter: none !important;
+        transform: none !important;
+    }
+
+    .slide img {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+    }
+
+    .slide.hovered {
+        transform: scale(1.2) !important;
+        filter: brightness(1.3) !important;
+        z-index: 2;
+    }
+
+    .sct2 {
+        width: 95%;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .subtitleSct2 {
+        color: #ADABAB;
+        font-size: 16px;
+        font-family: "Inter", "Sans-serif";
+        font-weight: bold;
+        margin: 0;
+        margin-top: 15%;
+    }
+
+    .titleSct2 {
+        font-size: 28px;
+        font-family: "Montserrat", "Sans-serif";
+        color: white;
+        font-weight: bold;
+    }
+
+    .imgServico {
+        width: 55px;
+        height: 45px;
+    }
+
+    .titleServicos {
+        font-size: 20px;
+        font-family: "Montserrat", "Sans-serif";
+        color: white;
+        text-align: left;
+        font-weight: bold;
+        margin-top: 2%;
+    }
+
+    .descServico {
+        font-size: 16px;
+        font-weight: 450;
+        font-family: "Inter", "Sans-serif";
+        color: #DADADA;
+        text-align: justify;
+        width: 85%;
+    }
+
+    .btnServicos {
+        background-color: #1C2A4A;
+        color: white;
+        font-family: "Montserrat", "Sans-serif";
+        font-size: 14px;
+        text-align: center;
+        font-weight: bold;
+        border: 1px solid #FFFFFF;
+        border-radius: 30px;
+        padding: 10px 20px;
+    }
+
+    .btnServicos img {
+        width: 10px;
+        margin-bottom: 3%;
+    }
+
+    .colServico {
+        margin-top: 5%;
+    }
+
+    .sct3 {
+        width: 85%;
+        margin: auto;
+        margin-top: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imgSct3 {
+        width: 50%;
+        height: auto;
+    }
+
+    .divInfoSobreNos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .divImgSobreNos {
+        text-align: center;
+    }
+
+    .subTitleSct3 {
+        color: #ADABAB;
+        font-family: "Inter", "Sans-serif";
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0;
+        margin-top: 8%;
+    }
+
+    .titleSct3 {
+        font-family: "Montserrat", "Sans-serif";
+        font-weight: bold;
+        color: white;
+        font-size: 30px;
+    }
+
+    .descSct3 {
+        font-family: "Inter", "Sans-serif";
+        font-weight: 450;
+        font-size: 18px;
+        color: #DADADA;
+        text-align: justify;
+        margin-top: 2%;
+    }
+
+    .btnSobreNos {
+        background-color: #1C2A4A;
+        color: white;
+        font-family: "Montserrat", "Sans-serif";
+        font-weight: bold;
+        font-size: 15px;
+        padding: 10px 20px;
+        border-radius: 30px;
+        border: 1px solid white;
+        margin-top: 2%;
+    }
+
+    .btnSobreNos img {
+        width: 10px;
+        margin-bottom: 1%;
+    }
+
+    .project-card {
+        position: relative;
+        width: 50vh;
+        height: 35vh;
+        flex-shrink: 0;
+        border-radius: 12px;
+        overflow: hidden;
+        scroll-snap-align: start;
+        transition: transform 0.3 ease;
+        margin: auto;
+        margin-top: 10%;
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1));
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        z-index: 2;
+    }
+
+    .imgProjeto {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        z-index: 0;
+    }
+
+    .sct4 {
+        width: 85%;
+        margin: auto;
+        margin-top: 20%;
+        margin-bottom: 5%;
+    }
+
+    .overlay h3 {
+        color: white;
+        font-family: "Space Grotesk", "Sans-serif";
+        font-size: 24px;
+        margin-left: 2%;
+        font-weight: bold;
+        width: 90%;
+    }
+
+    .overlay p {
+        width: 90%;
+        color: #FFF3F3;
+        font-family: "Inter", "Sans-serif";
+        font-size: 18px;
+        margin-left: 2%;
+    }
+
+    .btnProjeto {
+        background-color: #1C2A4A;
+        color: white;
+        font-size: 15px;
+        font-family: "Montserrat", "Sans-serif";
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 30px;
+    }
+
+    .divBtnProjeto {
+        margin-left: 2%;
+        margin-bottom: 3%;
+    }
+
+    .btnProjeto img {
+        width: 10px;
+        margin-bottom: 5%;
+    }
+
+    .subTitleSct4 {
+        color: #ADABAB;
+        font-family: "Inter", "Sans-serif";
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .titleSct4 {
+        font-family: "Montserrat", "Sans-serif";
+        font-weight: bold;
+        color: white;
+        font-size: 30px;
+    }
+
+    .sct5 {
+        width: 95%;
+        margin: auto;
+        margin-top: 12%;
+        margin-bottom: 2%;
+    }
+
+    .card-depoimento {
+        background: linear-gradient(to right, #0A192F 0%, #070D1A 100%);
+        padding: 10px;
+        width: 80%;
+        margin: auto;
+        height: auto;
+        margin-top: 10%;
+        border-radius: 20px;
+        box-shadow: 5px 9px 1.1px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    .fotoPerfil {
+        width: 50px;
+        height: 46px;
+    }
+
+    .logoTwitter {
+        width: 25px;
+        height: 25px;
+    }
+
+    .card-depoimentoDireita {
+        transform: rotate(2.26deg);
+    }
+
+    .card-depoimentoEsquerda {
+        transform: rotate(-2.26deg);
+    }
+
+    .subTitleSct5 {
+        color: #ADABAB;
+        font-family: "Inter", "Sans-serif";
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .titleSct5 {
+        font-family: "Montserrat", "Sans-serif";
+        font-weight: bold;
+        color: white;
+        font-size: 30px;
+        margin-bottom: 2%;
+    }
+
+    .card-depoimento h4 {
+        color: white;
+        font-family: "Inter", "Sans-serif";
+        font-size: 20px;
+        font-weight: 450;
+        margin-top: 4%;
+    }
+
+    .depoimento {
+        font-family: "Inter", "Sans-serif";
+        color: #AFA7A7;
+        font-weight: 350;
+        font-size: 18px;
+        text-align: justify;
+        margin-top: 4%;
+    }
+
+    .cargo {
+        font-size: 17px;
+        font-weight: 350;
+        color: #00BFFF;
+        font-family: "Inter", "Sans-serif";
+        margin-top: 2%;
+    }
+
+    .chamadaAcaoSct5 h2 {
+        text-align: center;
+        font-size: 26px;
+        font-family: "Montserrat", "Sans-serif";
+        color: #00BFFF;
+        font-weight: bold;
+        margin-top: 20%;
+    }
+
+    .chamadaAcaoSct5 p {
+        text-align: center;
+        font-size: 18px;
+        font-family: "Inter", "Sans-serif";
+        color: #DADADA;
+        margin-top: 1%;
+        font-weight: 400;
+    }
+
+    .btnOrcamento {
+        border: none;
+        background-color: #0A192F;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        font-family: "Montserrat", "Sans-serif";
+        padding: 15px 30px;
+        border-radius: 30px;
+        box-shadow: 5px 9px 1.1px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    .divBtnSct5 {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin-top: 2%;
+
+    }
+
+    .btnOrcamento img {
+        width: 10px;
+        margin-bottom: 2%;
+    }
+
+
+    .sct6 {
+        width: 95%;
+        margin: auto;
+        margin-top: 25%;
+    }
+
+    .divImgSct6 {
+        background: linear-gradient(45deg,
+                #0A192F 0%,
+                #070D1A 100%);
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .divSeloQualidade {
+        margin-top: 2%;
+        display: flex;
+        align-items: center;
+    }
+
+    .divImgSct6 img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .titleSeloQualidade {
+        font-family: "Montserrat", "Sans-serif";
+        font-size: 22px;
+        font-weight: bold;
+        color: white;
+        width: 100%;
+        margin: 0;
+    }
+
+    .titleSct6 {
+        font-size: 30px;
+        color: white;
+        font-weight: bold;
+        font-family: "Montserrat", "Sans-serif";
+    }
+
+    .subTitleSct6 {
+        color: #FFF3F3;
+        font-weight: 350;
+        font-family: "Inter", "Sans-serif";
+        font-size: 18px;
+    }
+
+    .pSeloQualidade {
+        color: #DADADA;
+        font-weight: 350;
+        font-family: "Inter", "Sans-serif";
+        font-size: 17px;
+        width: 100%;
+    }
+
+    .divInfoSeloQualidade {
+        margin-top: 4%;
+        margin-left: 4%;
+    }
+
+    .h2Sct6 {
+        font-family: "Montserrat", "Sans-serif";
+        font-weight: bold;
+        font-size: 26px;
+        margin-top: 15%;
+        color: #00BFFF;
+        text-align: center;
+    }
+
+    .divBtnSct6 {
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    footer {
+        width: 95%;
+        margin: auto;
+        margin-top: 10%;
+        padding-bottom: 20px;
+    }
+
+    .linha {
+        margin-bottom: 5%;
+        height: 1.5px;
+        background-color: #424242;
+    }
+
+    .linhaMobile {
+        height: 1.5px;
+        background-color: #424242;
+        margin-top: 5%;
+        width: 95%;
+    }
+
+    .colEsquerdaFooter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .criadoPor {
+        text-align: center;
+        color: white;
+        margin-top: 5%;
+        font-size: 13px;
+        font-weight: bold;
+        font-family: "Montserrat", "Sans-serif";
+    }
+
+    .criador {
+        text-align: center;
+    }
+
+    .colEsquerdaFooter h6 {
+        font-size: 13px;
+        font-weight: bold;
+        color: white;
+        font-family: "Montserrat", "Sans-serif";
+        text-align: center;
+    }
+
+    .colEsquerdaFooter nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menuFooter a {
+        text-decoration: none;
+        color: #DADADA;
+        margin-top: 1%;
+        font-weight: 350;
+        font-family: "Inter", "Sans-serif";
+    }
+
+    .logoFooter {
+        width: 20%;
+        height: auto;
+        margin: auto;
+    }
 }
 
-@media screen and (min-width: 1400px) and (max-width: 1599px) {
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+
     #header {
         position: fixed;
         top: 0;
@@ -57,20 +775,25 @@ body {
 
     .sct1 {
         height: 100vh;
-        position: relative;
-        display: flex;
-        align-items: center;
+        position: relative;       
+        overflow: hidden;
     }
 
-    #imgRobo {
+
+    .divImgRobo {
         position: absolute;
         right: 0;
         bottom: 0;
-        width: 50%;
-        max-width: 700px;
+        z-index: 0;
+        width: 70%;
         height: 100%;
+    }
+
+    #imgRobo {
+        height: 100%;
+        width: auto;
         object-fit: contain;
-        z-index: 1;
+        opacity: 0.8;
         animation: slideInRight 1.2s ease-out;
     }
 
@@ -79,15 +802,20 @@ body {
     }
 
     .rowHeader {
-        width: 90%;
+        width: 95%;
         margin: auto;
     }
 
     .divInfoHeader {
-        justify-content: center;
         position: relative;
-        z-index: 2;
-        margin-top: 10%;
+        z-index: 1;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        margin: auto;
+        margin-top: 8%;
         animation: fadeUp 1s ease-out;
     }
 
@@ -113,7 +841,7 @@ body {
         color: white;
         font-family: "Montserrat", "Sans-serif";
         font-weight: bold;
-        font-size: 18px;
+        font-size: 13px;
         height: 5vh;
         display: flex;
         align-items: center;
@@ -135,11 +863,12 @@ body {
         color: white;
         font-family: "Montserrat", "Sans-serif";
         font-weight: bold;
-        font-size: 18px;
+        font-size: 13px;
         height: 5vh;
         display: flex;
         align-items: center;
         gap: 7px;
+        width: 100%;
         text-align: center;
         justify-content: center;
         padding: 25px 40px 25px 40px;
@@ -166,12 +895,17 @@ body {
         margin-top: 2%;
     }
 
+
     .slider {
         width: 90%;
         margin: auto;
-        margin-top: 2%;
-        overflow: visible;
+        margin-top: 4%;
+        overflow: hidden;
         margin-bottom: 2%;
+    }
+
+    .carrossel-container {
+        margin: 0;
     }
 
     .slide-track {
@@ -181,15 +915,17 @@ body {
     }
 
     .slide {
-        width: 250px;
+        width: 30vw;
         flex-shrink: 0;
-        margin: 0 10px;
+        margin: 0;
         transition: transform 0.3s ease, filter 0.3s ease;
+        filter: none !important;
+        transform: none !important;
     }
 
     .slide img {
-        width: 60px;
-        height: auto;
+        width: 50px;
+        height: 50px;
         border-radius: 10px;
     }
 
@@ -200,7 +936,7 @@ body {
     }
 
     .sct2 {
-        width: 85%;
+        width: 95%;
         margin: auto;
         justify-content: center;
     }
@@ -211,35 +947,19 @@ body {
         font-family: "Inter", "Sans-serif";
         font-weight: bold;
         margin: 0;
-        margin-top: 12%;
+        margin-top: 15%;
     }
 
     .titleSct2 {
-        font-size: 32px;
+        font-size: 28px;
         font-family: "Montserrat", "Sans-serif";
         color: white;
         font-weight: bold;
     }
 
-    .row1 {
-        display: flex;
-        justify-content: space-between;
-        /* ou space-around para mais "respiro" */
-        flex-wrap: wrap;
-        margin-top: 4%;
-    }
-
-    .colServico {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        /* Mantém tudo à esquerda */
-        text-align: left;
-    }
-
     .imgServico {
-        width: 70px;
-        height: 50px;
+        width: 55px;
+        height: 45px;
     }
 
     .titleServicos {
@@ -248,7 +968,6 @@ body {
         color: white;
         text-align: left;
         font-weight: bold;
-        width: 85%;
         margin-top: 2%;
     }
 
@@ -273,21 +992,26 @@ body {
         padding: 10px 20px;
     }
 
-    .ultimoBtn {
-        margin-top: 10%;
+    .btnServicos img {
+        width: 10px;
+        margin-bottom: 3%;
+    }
+
+    .colServico {
+        margin-top: 5%;
     }
 
     .sct3 {
         width: 85%;
         margin: auto;
-        margin-top: 12%;
+        margin-top: 15%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .imgSct3 {
-        width: 70%;
+        width: 80%;
         height: auto;
     }
 
@@ -305,22 +1029,23 @@ body {
     .subTitleSct3 {
         color: #ADABAB;
         font-family: "Inter", "Sans-serif";
-        font-size: 14px;
+        font-size: 16px;
         font-weight: bold;
         margin: 0;
+        margin-top: 8%;
     }
 
     .titleSct3 {
         font-family: "Montserrat", "Sans-serif";
         font-weight: bold;
         color: white;
-        font-size: 32px;
+        font-size: 30px;
     }
 
     .descSct3 {
         font-family: "Inter", "Sans-serif";
         font-weight: 450;
-        font-size: 20px;
+        font-size: 18px;
         color: #DADADA;
         text-align: justify;
         margin-top: 2%;
@@ -331,23 +1056,29 @@ body {
         color: white;
         font-family: "Montserrat", "Sans-serif";
         font-weight: bold;
-        font-size: 16px;
+        font-size: 15px;
         padding: 10px 20px;
         border-radius: 30px;
         border: 1px solid white;
         margin-top: 2%;
     }
 
+    .btnSobreNos img {
+        width: 10px;
+        margin-bottom: 1%;
+    }
+
     .project-card {
         position: relative;
         width: 50vh;
-        height: 40vh;
+        height: 35vh;
         flex-shrink: 0;
         border-radius: 12px;
         overflow: hidden;
         scroll-snap-align: start;
         transition: transform 0.3 ease;
         margin: auto;
+        margin-top: 10%;
     }
 
     .overlay {
@@ -359,9 +1090,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        /* <-- Aqui o ajuste */
         align-items: flex-start;
-        /* Pode ajustar conforme preferir */
         z-index: 2;
     }
 
@@ -376,7 +1105,7 @@ body {
     .sct4 {
         width: 85%;
         margin: auto;
-        margin-top: 12%;
+        margin-top: 20%;
         margin-bottom: 5%;
     }
 
@@ -393,14 +1122,14 @@ body {
         width: 90%;
         color: #FFF3F3;
         font-family: "Inter", "Sans-serif";
-        font-size: 16px;
+        font-size: 18px;
         margin-left: 2%;
     }
 
     .btnProjeto {
         background-color: #1C2A4A;
         color: white;
-        font-size: 14px;
+        font-size: 15px;
         font-family: "Montserrat", "Sans-serif";
         font-weight: bold;
         padding: 10px 20px;
@@ -413,8 +1142,7 @@ body {
     }
 
     .btnProjeto img {
-        width: 12px;
-        height: 12px;
+        width: 10px;
         margin-bottom: 5%;
     }
 
@@ -430,12 +1158,11 @@ body {
         font-family: "Montserrat", "Sans-serif";
         font-weight: bold;
         color: white;
-        font-size: 32px;
-        margin-bottom: 2%;
+        font-size: 30px;
     }
 
     .sct5 {
-        width: 85%;
+        width: 95%;
         margin: auto;
         margin-top: 12%;
         margin-bottom: 2%;
@@ -443,9 +1170,23 @@ body {
 
     .card-depoimento {
         background: linear-gradient(to right, #0A192F 0%, #070D1A 100%);
-        padding: 17px;
+        padding: 10px;
+        width: 65%;
+        margin: auto;
+        height: auto;
+        margin-top: 10%;
         border-radius: 20px;
         box-shadow: 5px 9px 1.1px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    .fotoPerfil {
+        width: 50px;
+        height: 46px;
+    }
+
+    .logoTwitter {
+        width: 25px;
+        height: 25px;
     }
 
     .card-depoimentoDireita {
@@ -460,21 +1201,21 @@ body {
         color: #ADABAB;
         font-family: "Inter", "Sans-serif";
         font-weight: bold;
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .titleSct5 {
         font-family: "Montserrat", "Sans-serif";
         font-weight: bold;
         color: white;
-        font-size: 32px;
+        font-size: 30px;
         margin-bottom: 2%;
     }
 
     .card-depoimento h4 {
         color: white;
         font-family: "Inter", "Sans-serif";
-        font-size: 14px;
+        font-size: 20px;
         font-weight: 450;
         margin-top: 4%;
     }
@@ -483,12 +1224,13 @@ body {
         font-family: "Inter", "Sans-serif";
         color: #AFA7A7;
         font-weight: 350;
-        font-size: 16px;
+        font-size: 18px;
+        text-align: justify;
         margin-top: 4%;
     }
 
     .cargo {
-        font-size: 16px;
+        font-size: 17px;
         font-weight: 350;
         color: #00BFFF;
         font-family: "Inter", "Sans-serif";
@@ -497,16 +1239,16 @@ body {
 
     .chamadaAcaoSct5 h2 {
         text-align: center;
-        font-size: 32px;
+        font-size: 26px;
         font-family: "Montserrat", "Sans-serif";
         color: #00BFFF;
         font-weight: bold;
-        margin-top: 10%;
+        margin-top: 20%;
     }
 
     .chamadaAcaoSct5 p {
         text-align: center;
-        font-size: 22px;
+        font-size: 18px;
         font-family: "Inter", "Sans-serif";
         color: #DADADA;
         margin-top: 1%;
@@ -515,8 +1257,8 @@ body {
 
     .btnOrcamento {
         border: none;
-        background-color: #1C2A4A;
-        font-size: 16px;
+        background-color: #0A192F;
+        font-size: 15px;
         font-weight: bold;
         color: white;
         font-family: "Montserrat", "Sans-serif";
@@ -534,46 +1276,48 @@ body {
     }
 
     .btnOrcamento img {
-        width: 15px;
-        height: 15px;
+        width: 10px;
         margin-bottom: 2%;
     }
 
+
     .sct6 {
-        width: 85%;
+        width: 95%;
         margin: auto;
-        margin-top: 10%;
+        margin-top: 25%;
     }
 
     .divImgSct6 {
-        background: linear-gradient(to right, #0A192F 0%, #070D1A 100%);
+        background: linear-gradient(45deg,
+                #0A192F 0%,
+                #070D1A 100%);
         text-align: center;
-        width: 90%;
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding: 20px;
         border-radius: 10px;
     }
 
     .divSeloQualidade {
         margin-top: 2%;
+        display: flex;
+        align-items: center;
     }
 
     .divImgSct6 img {
-        width: 60%;
+        width: 60px;
+        height: 60px;
     }
 
     .titleSeloQualidade {
         font-family: "Montserrat", "Sans-serif";
-        font-size: 28px;
+        font-size: 22px;
         font-weight: bold;
         color: white;
-        text-align: center;
-        width: 90%;
-        margin-top: 4%;
+        width: 100%;
+        margin: 0;
     }
 
     .titleSct6 {
-        font-size: 32px;
+        font-size: 30px;
         color: white;
         font-weight: bold;
         font-family: "Montserrat", "Sans-serif";
@@ -589,715 +1333,95 @@ body {
     .pSeloQualidade {
         color: #DADADA;
         font-weight: 350;
-        font-family: "Inter", "Sans-serif";
-        font-size: 18px;
-        text-align: center;
-        width: 90%;
-    }
-}
-
-@media screen and (min-width: 1600px) {
-
-    #header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 999;
-        animation: fadeDown 0.8s ease-out;
-        background: linear-gradient(to bottom,
-                rgba(7, 13, 26, 0.42) 0%,
-                rgba(27, 25, 25, 0.22) 100%);
-        margin-top: 2%;
-    }
-
-    .containerHeader {
-        width: 90%;
-        margin: auto;
-    }
-
-    .divHeader {
-        border: 2px solid #FFD4D4;
-        border-radius: 45px;
-        background: linear-gradient(to bottom,
-                rgba(7, 13, 26, 0.42) 0%,
-                rgba(27, 25, 25, 0.22) 100%);
-        display: flex;
-        align-items: center;
-    }
-
-    .divHeader h1 {
-        color: white;
-        font-size: 25px;
-        font-family: "Space Grotesk", "Sans-serif";
-        display: flex;
-        align-items: center;
-        margin-top: 2%;
-        margin-left: 5%;
-    }
-
-    ul a {
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-        font-family: "Montserrat", "Sans-serif";
-        font-size: 15px;
-    }
-
-    .sct1 {
-        height: 100vh;
-        position: relative;
-        display: flex;
-        align-items: center;
-    }
-
-    #imgRobo {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 50%;
-        height: 100%;
-        object-fit: contain;
-        z-index: 1;
-        animation: slideInRight 1.2s ease-out;
-    }
-
-    .spnH1Header {
-        color: #00BFFF;
-    }
-
-    .rowHeader {
-        width: 90%;
-        margin: auto;
-    }
-
-    .divInfoHeader {
-        justify-content: center;
-        position: relative;
-        z-index: 2;
-        animation: fadeUp 1s ease-out;
-    }
-
-    .subTitleHeader {
-        color: #ADABAB;
-        font-family: "Inter", "Sans-serif";
-        font-size: 22px;
-        font-weight: bold;
-    }
-
-    .divInfoHeader h1 {
-        color: white;
-        font-family: "Space Grotesk", "Sans-serif";
-        font-size: 48px;
-        text-align: justify;
-        font-weight: bold;
-    }
-
-    .btnEntrarContato {
-        background-color: #1C2A4A;
-        border: 0.5px solid #FFFFFF;
-        border-radius: 30px;
-        color: white;
-        font-family: "Montserrat", "Sans-serif";
-        font-weight: bold;
-        font-size: 20px;
-        height: 5vh;
-        width: auto;
-        display: flex;
-        align-items: center;
-        gap: 7px;
-        text-align: center;
-        padding: 20px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .divBtnAcoes {
-        display: flex;
-        margin-top: 5%;
-    }
-
-    .btnNossosServicos {
-        background-color: #070D1A;
-        border: 0.2px solid #FFFFFF;
-        border-radius: 30px;
-        color: white;
-        font-family: "Montserrat", "Sans-serif";
-        font-weight: bold;
-        font-size: 20px;
-        height: 5vh;
-        width: 25vh;
-        display: flex;
-        align-items: center;
-        gap: 7px;
-        text-align: center;
-        justify-content: center;
-        padding: 20px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .btnEntrarContato img {
-        width: 15px;
-        height: 15px;
-    }
-
-    .btnEntrarContato:hover,
-    .btnNossosServicos:hover {
-        transform: scale(1.05);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    .pHeader {
-        font-family: "Inter", "Sans-serif";
-        font-weight: 400;
-        color: #DADADA;
-        font-size: 22px;
-        text-align: justify;
-        margin-top: 2%;
-    }
-
-    .slider {
-        width: 90%;
-        margin: auto;
-        margin-top: 2%;
-        overflow: visible;
-        margin-bottom: 2%;
-    }
-
-    .slide-track {
-        display: flex;
-        width: calc(250px * 10);
-        animation: scroll 60s linear infinite;
-    }
-
-    .slide {
-        width: 250px;
-        flex-shrink: 0;
-        margin: 0 10px;
-        transition: transform 0.3s ease, filter 0.3s ease;
-    }
-
-    .slide img {
-        width: 60px;
-        height: auto;
-        border-radius: 10px;
-    }
-
-
-    .titleTecnologias {
-        color: #ADABAB;
-        font-family: "Inter", "Sans-serif";
-        font-weight: bold;
-        font-size: 22px;
-        margin-top: 1%;
-    }
-
-    .slide.hovered {
-        transform: scale(1.2) !important;
-        filter: brightness(1.3) !important;
-        z-index: 2;
-    }
-
-    .sct2 {
-        width: 85%;
-        margin: auto;
-        justify-content: center;
-    }
-
-    .subtitleSct2 {
-        color: #ADABAB;
-        font-size: 18px;
-        font-family: "Inter", "Sans-serif";
-        font-weight: bold;
-        margin: 0;
-        margin-top: 12%;
-    }
-
-    .titleSct2 {
-        font-size: 36px;
-        font-family: "Montserrat", "Sans-serif";
-        color: white;
-        font-weight: bold;
-    }
-
-    .row1 {
-        display: flex;
-        justify-content: space-between;
-        /* ou space-around para mais "respiro" */
-        flex-wrap: wrap;
-        margin-top: 4%;
-    }
-
-    .colServico {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        /* Mantém tudo à esquerda */
-        text-align: left;
-    }
-
-    .imgServico {
-        width: 78px;
-        height: 58px;
-    }
-
-    .titleServicos {
-        font-size: 22px;
-        font-family: "Montserrat", "Sans-serif";
-        color: white;
-        text-align: left;
-        font-weight: bold;
-        width: 85%;
-        margin-top: 2%;
-    }
-
-    .descServico {
-        font-size: 18px;
-        font-weight: 450;
-        font-family: "Inter", "Sans-serif";
-        color: #DADADA;
-        text-align: justify;
-        width: 85%;
-    }
-
-    .btnServicos {
-        background-color: #1C2A4A;
-        color: white;
-        font-family: "Montserrat", "Sans-serif";
-        font-size: 16px;
-        text-align: center;
-        font-weight: bold;
-        border: 1px solid #FFFFFF;
-        border-radius: 30px;
-        padding: 10px 20px;
-    }
-
-    .sct3 {
-        width: 85%;
-        margin: auto;
-        margin-top: 12%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .imgSct3 {
-        width: 70%;
-        height: auto;
-    }
-
-    .divInfoSobreNos {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100%;
-    }
-
-    .divImgSobreNos {
-        text-align: center;
-    }
-
-    .subTitleSct3 {
-        color: #ADABAB;
-        font-family: "Inter", "Sans-serif";
-        font-size: 18px;
-        font-weight: bold;
-        margin: 0;
-    }
-
-    .titleSct3 {
-        font-family: "Montserrat", "Sans-serif";
-        font-weight: bold;
-        color: white;
-        font-size: 36px;
-    }
-
-    .descSct3 {
-        font-family: "Inter", "Sans-serif";
-        font-weight: 450;
-        font-size: 26px;
-        color: #DADADA;
-        text-align: justify;
-        margin-top: 2%;
-    }
-
-    .btnSobreNos {
-        background-color: #1C2A4A;
-        color: white;
-        font-family: "Montserrat", "Sans-serif";
-        font-weight: bold;
-        font-size: 20px;
-        padding: 10px 20px;
-        border-radius: 30px;
-        border: 1px solid white;
-        margin-top: 2%;
-    }
-
-    .project-card {
-        position: relative;
-        width: 50vh;
-        height: 40vh;
-        flex-shrink: 0;
-        border-radius: 12px;
-        overflow: hidden;
-        scroll-snap-align: start;
-        transition: transform 0.3 ease;
-        margin: auto;
-    }
-
-    .overlay {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1));
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        /* <-- Aqui o ajuste */
-        align-items: flex-start;
-        /* Pode ajustar conforme preferir */
-        z-index: 2;
-    }
-
-    .imgProjeto {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        z-index: 0;
-    }
-
-    .sct4 {
-        width: 85%;
-        margin: auto;
-        margin-top: 12%;
-        margin-bottom: 5%;
-    }
-
-    .overlay h3 {
-        color: white;
-        font-family: "Space Grotesk", "Sans-serif";
-        font-size: 24px;
-        margin-left: 2%;
-        font-weight: bold;
-        width: 90%;
-    }
-
-    .overlay p {
-        width: 90%;
-        color: #FFF3F3;
-        font-family: "Inter", "Sans-serif";
-        font-size: 16px;
-        margin-left: 2%;
-    }
-
-    .btnProjeto {
-        background-color: #1C2A4A;
-        color: white;
-        font-size: 16px;
-        font-family: "Montserrat", "Sans-serif";
-        font-weight: bold;
-        padding: 10px 20px;
-        border-radius: 30px;
-    }
-
-    .divBtnProjeto {
-        margin-left: 2%;
-        margin-bottom: 3%;
-    }
-
-    .btnProjeto img {
-        width: 12px;
-        height: 12px;
-        margin-bottom: 5%;
-    }
-
-    .subTitleSct4 {
-        color: #ADABAB;
-        font-family: "Inter", "Sans-serif";
-        font-size: 18px;
-        font-weight: bold;
-        margin: 0;
-    }
-
-    .titleSct4 {
-        font-family: "Montserrat", "Sans-serif";
-        font-weight: bold;
-        color: white;
-        font-size: 36px;
-        margin-bottom: 2%;
-    }
-
-    .sct5 {
-        width: 85%;
-        margin: auto;
-        margin-top: 12%;
-        margin-bottom: 2%;
-    }
-
-    .card-depoimento {
-        background: linear-gradient(to right, #0A192F 0%, #070D1A 100%);
-        padding: 30px;
-        border-radius: 20px;
-        box-shadow: 5px 9px 1.1px 0 rgba(0, 0, 0, 0.25);
-    }
-
-    .card-depoimentoDireita {
-        transform: rotate(2.26deg);
-    }
-
-    .card-depoimentoEsquerda {
-        transform: rotate(-2.26deg);
-    }
-
-    .subTitleSct5 {
-        color: #ADABAB;
-        font-family: "Inter", "Sans-serif";
-        font-weight: bold;
-        font-size: 18px;
-    }
-
-    .titleSct5 {
-        font-family: "Montserrat", "Sans-serif";
-        font-weight: bold;
-        color: white;
-        font-size: 36px;
-        margin-bottom: 2%;
-    }
-
-    .card-depoimento h4 {
-        color: white;
         font-family: "Inter", "Sans-serif";
         font-size: 17px;
-        font-weight: 450;
+        width: 100%;
+    }
+
+    .divInfoSeloQualidade {
         margin-top: 4%;
-    }
-
-    .depoimento {
-        font-family: "Inter", "Sans-serif";
-        color: #AFA7A7;
-        font-weight: 350;
-        font-size: 20px;
-        margin-top: 4%;
-    }
-
-    .cargo {
-        font-size: 18px;
-        font-weight: 350;
-        color: #00BFFF;
-        font-family: "Inter", "Sans-serif";
-        margin-top: 2%;
-    }
-
-    .chamadaAcaoSct5 h2 {
-        text-align: center;
-        font-size: 36px;
-        font-family: "Montserrat", "Sans-serif";
-        color: #00BFFF;
-        font-weight: bold;
-        margin-top: 10%;
-    }
-
-    .chamadaAcaoSct5 p {
-        text-align: center;
-        font-size: 26px;
-        font-family: "Inter", "Sans-serif";
-        color: #DADADA;
-        margin-top: 1%;
-        font-weight: 400;
-    }
-
-    .btnOrcamento {
-        border: none;
-        background-color: #1C2A4A;
-        font-size: 20px;
-        font-weight: bold;
-        color: white;
-        font-family: "Montserrat", "Sans-serif";
-        padding: 15px 30px;
-        border-radius: 30px;
-        box-shadow: 5px 9px 1.1px 0 rgba(0, 0, 0, 0.25);
-    }
-
-    .divBtnSct5 {
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        margin-top: 2%;
-
-    }
-
-    .btnOrcamento img {
-        width: 15px;
-        height: 15px;
-        margin-bottom: 2%;
-    }
-
-    .sct6 {
-        width: 85%;
-        margin: auto;
-        margin-top: 10%;
-    }
-
-    .divImgSct6 {
-        background: linear-gradient(to right, #0A192F 0%, #070D1A 100%);
-        text-align: center;
-        width: 90%;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        border-radius: 10px;
-    }
-
-    .divSeloQualidade {
-        margin-top: 2%;
-    }
-
-    .divImgSct6 img {
-        width: 60%;
-    }
-
-    .titleSeloQualidade {
-        font-family: "Montserrat", "Sans-serif";
-        font-size: 32px;
-        font-weight: bold;
-        color: white;
-        text-align: center;
-        width: 90%;
-        margin-top: 4%;
-    }
-
-    .titleSct6 {
-        font-size: 36px;
-        color: white;
-        font-weight: bold;
-        font-family: "Montserrat", "Sans-serif";
-    }
-
-    .subTitleSct6 {
-        color: #FFF3F3;
-        font-weight: 350;
-        font-family: "Inter", "Sans-serif";
-        font-size: 22px;
-    }
-
-    .pSeloQualidade {
-        color: #DADADA;
-        font-weight: 350;
-        font-family: "Inter", "Sans-serif";
-        font-size: 22px;
-        text-align: center;
-        width: 90%;
+        margin-left: 4%;
     }
 
     .h2Sct6 {
         font-family: "Montserrat", "Sans-serif";
         font-weight: bold;
-        font-size: 36px;
-        text-align: center;
+        font-size: 26px;
         margin-top: 15%;
         color: #00BFFF;
+        text-align: center;
     }
 
     .divBtnSct6 {
-        margin-top: 2%;
+        margin-top: 5%;
         text-align: center;
     }
 
     footer {
-        width: 85%;
+        width: 95%;
         margin: auto;
         margin-top: 10%;
+        padding-bottom: 20px;
     }
 
     .linha {
-        height: 1px;
-        background-color: white;
+        margin-bottom: 5%;
+        height: 1.5px;
+        background-color: #424242;
     }
 
-    .criadoPor{
+    .linhaMobile {
+        height: 1.5px;
+        background-color: #424242;
+        margin-top: 5%;
+        width: 95%;
+    }
+
+    .colEsquerdaFooter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .criadoPor {
         text-align: center;
-        width: 316px;
         color: white;
         margin-top: 5%;
-        font-size: 15px;
+        font-size: 13px;
         font-weight: bold;
         font-family: "Montserrat", "Sans-serif";
     }
 
     .criador {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
+        text-align: center;
     }
 
-    .colEsquerdaFooter h6{
-        font-size: 15px;
-        margin-top: 5%;
+    .colEsquerdaFooter h6 {
+        font-size: 13px;
         font-weight: bold;
         color: white;
         font-family: "Montserrat", "Sans-serif";
+        text-align: center;
     }
 
-    .colEsquerdaFooter nav{
+    .colEsquerdaFooter nav {
         display: flex;
         flex-direction: column;
         text-align: center;
     }
 
-    .menuFooter a{
+    .menuFooter a {
         text-decoration: none;
         color: #DADADA;
         margin-top: 1%;
         font-weight: 350;
         font-family: "Inter", "Sans-serif";
     }
-}
 
-
-@keyframes slideInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
+    .logoFooter {
+        width: 50%;
+        height: auto;
+        margin: auto;
     }
 }

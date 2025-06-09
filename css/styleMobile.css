@@ -9,7 +9,7 @@
     /* Ajuste conforme a altura total do menu */
 }
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 536px) {
 
     #header {
         position: fixed;
@@ -22,6 +22,30 @@
                 rgba(7, 13, 26, 0.42) 0%,
                 rgba(27, 25, 25, 0.22) 100%);
         margin-top: 2%;
+    }
+
+    #headerMobile {
+        text-align: center;
+        background-color: #061025;
+        margin-top: 2%;
+        border-radius: 20px;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .itemMenu {
+        list-style: none;
+    }
+
+    .itemMenu a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 13px;
+        font-family: "Montserrat", "Sans-serif";
+
     }
 
     .containerHeader {
@@ -81,11 +105,12 @@
         z-index: 0;
         width: 90%;
         height: 100%;
+        text-align: left;
     }
 
     .divImgRobo img {
         height: 100%;
-        width: auto;
+        width: 50%;
         object-fit: cover;
         opacity: 0.8;
         animation: slideInRight 1.2s ease-out;
@@ -101,7 +126,7 @@
         height: 100vh;
         width: 95%;
         margin: auto;
-        margin-top: 15%;
+        margin-top: 8%;
         animation: fadeUp 1s ease-out;
     }
 
@@ -546,7 +571,7 @@
 
     .btnOrcamento {
         border: none;
-        background-color: #1C2A4A;
+        background-color: #0A192F;
         font-size: 13px;
         font-weight: bold;
         color: white;
@@ -571,17 +596,17 @@
 
 
     .sct6 {
-        width: 85%;
+        width: 95%;
         margin: auto;
-        margin-top: 10%;
+        margin-top: 25%;
     }
 
     .divImgSct6 {
-        background: linear-gradient(to right, #0A192F 0%, #070D1A 100%);
+        background: linear-gradient(45deg,
+                #0A192F 0%,
+                #070D1A 100%);
         text-align: center;
-        width: 90%;
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding: 20px;
         border-radius: 10px;
     }
 
@@ -592,21 +617,21 @@
     }
 
     .divImgSct6 img {
-        width: 60%;
+        width: 36px;
+        height: 36px;
     }
 
     .titleSeloQualidade {
         font-family: "Montserrat", "Sans-serif";
-        font-size: 28px;
+        font-size: 18px;
         font-weight: bold;
         color: white;
-        text-align: center;
-        width: 90%;
-        margin-top: 4%;
+        width: 100%;
+        margin: 0;
     }
 
     .titleSct6 {
-        font-size: 32px;
+        font-size: 24px;
         color: white;
         font-weight: bold;
         font-family: "Montserrat", "Sans-serif";
@@ -616,15 +641,100 @@
         color: #FFF3F3;
         font-weight: 350;
         font-family: "Inter", "Sans-serif";
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .pSeloQualidade {
         color: #DADADA;
         font-weight: 350;
         font-family: "Inter", "Sans-serif";
-        font-size: 18px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .divInfoSeloQualidade {
+        margin-top: 4%;
+        margin-left: 4%;
+    }
+
+    .h2Sct6 {
+        font-family: "Montserrat", "Sans-serif";
+        font-weight: bold;
+        font-size: 22px;
+        margin-top: 15%;
+        color: #00BFFF;
+    }
+
+    .divBtnSct6 {
+        margin-top: 5%;
+    }
+
+    footer {
+        width: 95%;
+        margin: auto;
+        margin-top: 25%;
+        padding-bottom: 20px;
+    }
+
+    .linha {
+        margin-bottom: 10%;
+        height: 1.5px;
+        background-color: #424242;
+    }
+
+    .linhaMobile {
+        height: 1.5px;
+        background-color: #424242;
+        margin-top: 10%;
+        width: 95%;
+    }
+
+    .colEsquerdaFooter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .criadoPor {
         text-align: center;
-        width: 90%;
+        color: white;
+        margin-top: 5%;
+        font-size: 13px;
+        font-weight: bold;
+        font-family: "Montserrat", "Sans-serif";
+    }
+
+    .criador {
+        gap: 8px;
+        text-align: center;
+    }
+
+    .colEsquerdaFooter h6 {
+        font-size: 13px;
+        margin-top: 5%;
+        font-weight: bold;
+        color: white;
+        font-family: "Montserrat", "Sans-serif";
+        text-align: center;
+    }
+
+    .colEsquerdaFooter nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menuFooter a {
+        text-decoration: none;
+        color: #DADADA;
+        margin-top: 1%;
+        font-weight: 350;
+        font-family: "Inter", "Sans-serif";
+    }
+
+    .logoFooter {
+        width: 50%;
+        margin: auto;
     }
 }
